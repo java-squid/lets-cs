@@ -49,6 +49,7 @@ HTTPS 통신에서 실제 전송되는 데이터의 암호화에는 대칭키 �
 - 서버와 통신하기 위한 공개키
 
 [참고] 네이버의 SSL 인증서
+
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrIQyc%2FbtqxQTIvM3e%2FhkENy1duCIJzLRm0mjpva1%2Fimg.png" width="500" height="800">
 <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcxCcsP%2FbtqxSiug2rE%2FyemriKPAJ2so6mJomCrfkk%2Fimg.png" width="500" height="800">
 
@@ -71,4 +72,4 @@ HTTPS 통신에서 실제 전송되는 데이터의 암호화에는 대칭키 �
 - https://gaeko-security-hack.tistory.com/123
 - https://offbyone.tistory.com/274
 - https://stackoverflow.com/questions/470523/how-does-ssl-really-work
-- https://techcommunity.microsoft.com/t5/iis-support-blog/client-certificate-authentication-part-1/ba-p/324623
+- https://docs.solace.com/Configuring-and-Managing/Two-Way-SSL-Authentication.htm
