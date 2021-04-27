@@ -14,7 +14,8 @@
 ### HTTPS와 SSL
 - 다음 이미지는 HTTPS와 SSL의 관계를 잘 보여준다. 
 - HTTPS는 SSL 프로토콜 위에서 돌아가고, HTTPS 외에도 FTP, NNTP, XMPP 등도 SSL 위에서 돌아가면 정보 전달 시 보안을 유지 할 수 있다.
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYQRTt%2FbtqxPSXDzOr%2FAbJopbCnnGtSbSK9ZMhnok%2Fimg.png)
+
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FYQRTt%2FbtqxPSXDzOr%2FAbJopbCnnGtSbSK9ZMhnok%2Fimg.png" width="800" height="500">
 
 ### TLS
 TLS란 SSL 과 동일한 의미이다. 네스케이프에서 보안 문제를 해결하기 위해 SSL 을 발명했고, 이것이 표준이 되면서 TLS 라는 이름으로 바뀌게 되었다. 현재는 둘을 혼용해서 사용하지만 SSL 이라는 이름을 더 많이 사용하고 있으며, 오픈소스의 이름 역시 OpenSSL 이다.
@@ -48,8 +49,8 @@ HTTPS 통신에서 실제 전송되는 데이터의 암호화에는 대칭키 �
 - 서버와 통신하기 위한 공개키
 
 [참고] 네이버의 SSL 인증서
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrIQyc%2FbtqxQTIvM3e%2FhkENy1duCIJzLRm0mjpva1%2Fimg.png)
-![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcxCcsP%2FbtqxSiug2rE%2FyemriKPAJ2so6mJomCrfkk%2Fimg.png)
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FrIQyc%2FbtqxQTIvM3e%2FhkENy1duCIJzLRm0mjpva1%2Fimg.png" width="500" height="800">
+<img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FcxCcsP%2FbtqxSiug2rE%2FyemriKPAJ2so6mJomCrfkk%2Fimg.png" width="500" height="800">
 
 # SSL 동작 과정
 1. 브라우저가 www.naver.com 에 연결을 시도한다.
@@ -60,10 +61,9 @@ HTTPS 통신에서 실제 전송되는 데이터의 암호화에는 대칭키 �
 5. www.naver.com 서버는 개인키를 사용하여 K를 해독한다. 이제 브라우저와 네이버 서버 모두 K를 알고 있는 상태가 된다.
 6. 브라우저가 www.naver.com 로 무언가를 보내려고 할 때마다 K로 암호화한다. www.naver.com 서버는 수신 즉시 암호를 해독한다. www.naver.com 서버는 브라우저로 무언가를 보내려고 할 때마다 K로 암호화한다.
 
+
 [참고] SSL Authentication flow
-
-![](https://msdnshared.blob.core.windows.net/media/MSDNBlogsFS/prod.evol.blogs.msdn.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/01/38/03/metablogapi/6574.060215_0710_ClientCerti2.png)
-
+<img src="https://docs.solace.com/Resources/Images/oneway_SSL_700x421.png" width="800" height="500">
 
 ### 출처
 - https://httpd.apache.org/docs/2.2/ko/howto/auth.html
