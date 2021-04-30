@@ -44,3 +44,7 @@
 - 미팅
   - 매주 화요일 20:00 ~ 20:30 까지 화상으로 그 주 진행한 스터디에 대해 피드백 하는 시간
     - 해당 미팅에 참석하지 못할 경우, 해당 일 오전까지는 참가원에게 알려줘야함
+ 
+ ## 참고
+ - [면접질문-JaeYeopHan](https://github.com/JaeYeopHan/Interview_Question_for_Beginner)
+ - [우테코-테크톡](https://www.youtube.com/watch?v=vNsZXC3VgUA&list=PLgXGHBqgT2TvpJ_p9L_yZKPifgdBOzdVH)
