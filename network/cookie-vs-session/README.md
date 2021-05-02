@@ -46,3 +46,4 @@
 - https://humanwhocodes.com/blog/2009/05/05/http-cookies-explained/#:~:text=Quite%20simply%2C%20a%20cookie%20is,on%20a%20set%20of%20rules.
 - https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Set-Cookie
 - https://stackoverflow.com/questions/6253633/cookies-vs-sessions
+- https://www.youtube.com/watch?v=y0xMXlOAfss
