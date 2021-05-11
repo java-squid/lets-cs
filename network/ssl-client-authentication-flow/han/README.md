@@ -52,3 +52,7 @@
 - https://engineering.linecorp.com/ko/blog/best-practices-to-secure-your-ssl-tls/ 
 
 # QnA
+
+## Hamil
+- 쿠키와 세션은 상태를 유지하기 위해 사용한다고 하는데요. 그렇다면 상태를 유지하기 위해 어떤 방법을 사용하는 게 더 좋을까요?
+- HTTPS 를 제공하는 사이트의 SSL 인증서를 직접 확인해보고, SSL 인증서에는 대표적으로 어떤 내용이 들어있는지 알아봅시다
