@@ -22,7 +22,9 @@ L4 로드밸런서는 tls/ssl termination 의 유무에 따라 크게 2가지 �
 
 
 > tls/ssl termination 이란?
-> 트래픽을 암호화 및 암호 해독하는 컴퓨팅 집약적인 작업으로부터 > 백엔드 서버를 해방하기 위한 작업 ex) clinet와 LB 사이의 개방된 네트워크에서는 HTTPS 통신, LB와 server 사이는 HTTP 통신
+> 
+> 트래픽을 암호화 및 암호 해독하는 컴퓨팅 집약적인 작업으로부터 
+> 백엔드 서버를 해방하기 위한 작업 ex) clinet와 LB 사이의 개방된 네트워크에서는 HTTPS 통신, LB와 server 사이는 HTTP 통신
 
 
 1. TCP/UDP Termination 로드 밸런서
@@ -37,13 +39,14 @@ L4 로드밸런서는 tls/ssl termination 의 유무에 따라 크게 2가지 �
     - tls termination을 사용하지 않으므로 LB에 가해지는 부하가 적어짐. termination LB 보다 훨씬 많은 수의 액티브 연결 및 초 당 패킷(PPS)를 처리 가능하고 DSR(Direct Server Return) 사용이 가능해짐.
 
 
-#### * DSR 이란?
-Client에서 Server로 갈 때는 로드 밸런서를 통해 가지만, Server에서 Client로 응답을 줄 땐 로드밸런서를 거치지 않고 바로 가는 방식을 뜻합니다.
-
-- Passthrough LB 를 기반으로 함
-- 전형적인 HTTP 요청과 응답 패턴에서 10% 정도가 요청이고 90% 정도가 응답이라고 할 수 있음. DSR 방식을 사용한다면 LB의 부하를 획기적으로 줄일 수 있음
-- NAT 대신 LB에서는 일반적으로 GRE(Generic Routing Encapsulation)을 사용하여 LB에서 Server로 가는 IP 패킷을 캡슐화함. Server에서는 캡슐을 분해해서 Client의 IP와 TCP 포트정보를 얻을 수 있음
-- 가장 중요한 건 Server가 로드밸런싱에 참여한다는 것임. Server에 GRE 터널이 올바르게 구성되어 있어야 함
+> DSR 이란?
+> 
+> Client에서 Server로 갈 때는 로드 밸런서를 통해 가지만, Server에서 Client로 응답을 줄 땐 로드밸런서를 거치지 않고 바로 가는 방식을 뜻합니다.
+>
+> 1. Passthrough LB 를 기반으로 함
+> 2. 전형적인 HTTP 요청과 응답 패턴에서 10% 정도가 요청이고 90% 정도가 응답이라고 할 수 있음. DSR 방식을 사용한다면 LB의 부하를 획기적으로 줄일 수 있음
+> 3. NAT 대신 LB에서는 일반적으로 GRE(Generic Routing Encapsulation)을 사용하여 LB에서 Server로 가는 IP 패킷을 캡슐화함. Server에서는 캡슐을 분해해서 Client의 IP와 TCP 포트정보를 얻을 수 있음
+> 4. 가장 중요한 건 Server가 로드밸런싱에 참여한다는 것임. Server에 GRE 터널이 올바르게 구성되어 있어야 함
 
 
 ### L7 로드밸런서
