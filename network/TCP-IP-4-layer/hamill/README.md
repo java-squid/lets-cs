@@ -7,7 +7,11 @@ OSI 계층의 물리 계층과 데이터 링크 계층에 해당합니다. Node-
 - 에러 검출 기능(Detecting errors), 패킷의 프레임화(Framing packets)
 - 주요 프로토콜: Ethernet, Token Ring, Frame Relay, ATM
 
+![image](https://user-images.githubusercontent.com/38041572/120208545-8d6c3b80-c268-11eb-9832-f0607d6bb82e.png)
+
 ### 2계층: 인터넷 계층 (Internet Layer)
+
+![image](https://user-images.githubusercontent.com/38041572/120208586-9c52ee00-c268-11eb-8614-11a70e0ab012.png)
 
 OSI 계층의 네트워크 계층에 해당합니다. 호스트 간의 라우팅을 담당합니다. 상위 트랜스포트 계층으로부터 받은 데이터에 IP 패킷 헤더를 붙여 IP 패킷을 만들고 이를 전송합니다. 어드레싱(Addressing), 패키징(Packaging), 라우팅(Routing) 기능을 제공합니다.
 
@@ -22,11 +26,15 @@ OSI 계층의 네트워크 계층에 해당합니다. 호스트 간의 라우팅
 
 ### 3계층: 전송 계층 (Transport Layer)
 
+![image](https://user-images.githubusercontent.com/38041572/120208611-a2e16580-c268-11eb-800a-ea159db074af.png)
+
 OSI 계층의 전송 계층에 해당합니다. 프로세스 간의 신뢰성 있는 데이터 전송을 담당합니다. 통신 노드 간의 연결을 제어하고, 네트워크 양단의 송수신 호스트 사이에서 신뢰성 있는 데이터 전송을 담당합니다.
 
 - 주요 프로토콜: TCP, UDP
 
 ### 4계층: 응용 계층 (Application Layer)
+
+![image](https://user-images.githubusercontent.com/38041572/120208627-aa087380-c268-11eb-9ec5-2ccdb91078ed.png)
 
 OSI 계층의 세션 계층, 표현 계층, 응용 계층에 해당합니다. 사용자와 가장 가까운 계층으로, 서버나 클라이언트 응용 프로그램이 이 계층에서 동작합니다. 동작하기 위해서는 전송 계층의 주소, 즉 포트 번호를 사용합니다. TCP/UDP 기반의 응용프로그램을 구현할 때 사용합니다.
 
