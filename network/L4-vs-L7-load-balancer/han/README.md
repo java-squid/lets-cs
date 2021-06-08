@@ -38,25 +38,12 @@
 
 # QnA
 
-## 1. TCP/IP vs OSI 7 layer
-![image](https://user-images.githubusercontent.com/22140570/121183244-d5a9e000-c89e-11eb-8888-2df53fdb6be4.png)
-
-> 참고
-- https://www.guru99.com/difference-tcp-ip-vs-osi-model.html
-- https://goitgo.tistory.com/25
-
-## 2. 로드 밸런서가 필요한 이유
+## 1. 로드 밸런서가 필요한 이유
 ![image](https://user-images.githubusercontent.com/22140570/121183397-fd00ad00-c89e-11eb-9c00-b8173aa65607.png)
 
 > 참고
 - https://newrelic.com/blog/best-practices/importance-local-load-balancing
 - https://toma0912.tistory.com/87
 
-## 3. L7 계층해서 사용하는 프로토콜 (HTTP 제외)
+## 2. L7 계층해서 사용하는 프로토콜 (HTTP 제외)
 ![image](https://user-images.githubusercontent.com/22140570/121183492-17d32180-c89f-11eb-820d-8669a9124869.png)
-
-## 4. ARP라는 프로토콜은 어떤식으로 동작하는가?
-![image](https://user-images.githubusercontent.com/22140570/121183610-3b966780-c89f-11eb-87bc-5b7d80a22a26.png)
-> 참고
-- https://www.practicalnetworking.net/series/arp/traditional-arp/
-- https://musclebear.tistory.com/12

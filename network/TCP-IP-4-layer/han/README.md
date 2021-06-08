@@ -48,3 +48,22 @@
 - https://d2.naver.com/helloworld/47667
 - https://velog.io/@conatuseus/2019-09-10-2009-%EC%9E%91%EC%84%B1%EB%90%A8-xsk0ds2eqf
 - [1% 네트워크](http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcode=9788931556742) -> 102p...~
+
+---
+
+# QnA
+
+## 1. TCP/IP vs OSI 7 layer
+![image](https://user-images.githubusercontent.com/22140570/121183244-d5a9e000-c89e-11eb-8888-2df53fdb6be4.png)
+
+> 참고
+- https://www.guru99.com/difference-tcp-ip-vs-osi-model.html
+- https://goitgo.tistory.com/25
+
+
+## 2. ARP라는 프로토콜은 어떤식으로 동작하는가?
+![image](https://user-images.githubusercontent.com/22140570/121183610-3b966780-c89f-11eb-87bc-5b7d80a22a26.png)
+
+> 참고
+- https://www.practicalnetworking.net/series/arp/traditional-arp/
+- https://musclebear.tistory.com/12
