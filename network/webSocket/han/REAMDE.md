@@ -39,8 +39,6 @@ Connection: Upgrade
 - https://d2.naver.com/helloworld/1336 에서, 간단하게 테스트해볼 수 있다!
 
 
-# websocket vs socekt.io
-- 
 
 # 참고
 - https://ko.wikipedia.org/wiki/%EC%9B%B9%EC%86%8C%EC%BC%93
