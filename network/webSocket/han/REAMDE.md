@@ -39,8 +39,17 @@ Connection: Upgrade
 - https://d2.naver.com/helloworld/1336 에서, 간단하게 테스트해볼 수 있다!
 
 
-
 # 참고
 - https://ko.wikipedia.org/wiki/%EC%9B%B9%EC%86%8C%EC%BC%93
 - https://d2.naver.com/helloworld/1336
 - https://socket.io/
+
+
+# QnA
+![image](https://user-images.githubusercontent.com/22140570/122920441-60f59c00-d39c-11eb-875d-2f74a09c01ae.png)
+- 참고
+  - https://stackoverflow.com/questions/14133452/which-osi-layer-does-websocket-protocol-lay-on
+
+---
+
+![image](https://user-images.githubusercontent.com/22140570/122920542-7a96e380-d39c-11eb-89cd-3e20f061e67e.png)
