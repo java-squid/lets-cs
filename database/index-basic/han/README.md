@@ -17,7 +17,9 @@
 ## MySQL 
 - 인덱스는 페이지 단위로 관리
 - 기본적으로 페이지 크기는 16kb
-- MySQL은 DB engine으로 InnoDB를 사용 중이고 이는 B-tree 로 이루어져있다고 알려져있음. (확실하진 않다!)
+- MySQL은 DB engine으로 InnoDB를 사용 중이고 이는 B-tree 로 
+이루어져있다고 알려져있음. (확실하진 않다!)
+  - 추가적으로 hash, full-text index등을 지원하는 등 (5.7 기준)
 - B-tree의 핵심은 데이터가 정렬된 상태로 유지되는 것.
 - 그리고 리프, 브랜치 노드에 모두 데이터 저장 가능하다.
 - [참고](https://stackoverflow.com/questions/65353975/how-to-view-the-b-tree-index-structure-generated-by-innodb-of-mysql)
