@@ -90,6 +90,8 @@ all leaves must appear on the same level
 - B tree와 비교되는 가장 큰 차이점
   1. 모든 leaf nodes 는 서로 연결되어 있음 (doubly linked list)
   2. internal node는 라우터처럼 leaf node 로 가는 중간다리 역할만 할 뿐이고, 실제 데이터가 저정되어 있는 page id 값은 leaf node 에만 저장이 된다.
+- internal node에 더 많은 key를 저장할 수 있다 (왜나면 키 외 다른 데이터는 저장하지 않으니까..)
+  - 이는 B+tree의 height가 Btree보다 낮음을 의미한다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/bplustreefull-2.png)
 - 2,4 key가 중복됨을 볼 수가 있음. (interanl, leaf)
