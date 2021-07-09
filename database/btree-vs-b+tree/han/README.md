@@ -41,36 +41,43 @@ all leaves must appear on the same level
 
 ## 어떻게 B tree가 만들어질까?
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree1-1.png)
+
 1. root 노드를 생성한다.
     - 해당 노드는 key/value pair로 구성되며, key = 1, value는 *로 묘사한다.
     - *의 의미는, 다른 레코드를 참조함을 의미한다. 
     - root 노드는 왼쪽, 오른쪽 서브트리로 갈 수 있는 pointer를 가지고 있다. 
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree2-1.png)
+
 2. 2라는 key를 가진 노드를 추가한다.
    - 현재 노드들은 key값을 기준으로 오름차순 정렬되어 있다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree3-1.png)
+
 3. 3이라는 key를 가진 노드를 추가한다.
     - 이순간 b tree는 split operation 이라고 불리는 행위를 실행한다.
     - 이 과정을 통해, left, middle , right node가 결정된다.
     - 처음 root 노드는 1 키를 가지고 있는 노드 였지만, 2 키를 가지고 있는 노드로 바뀌었다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree4-1-768x300-1.png)
+
 4. 4라는 키를 가진 노드를 삽입한다.
    - 이상태에서 B tree는 구조가 잡혀있기 때문에.. (3개이상의 노드가 삽입되었기 때문에)
    - 해당 키 값이 root노드보다 큰지 작은지 판단할 수 있다. (현재는 크다.)
    - right sub tree에 추가되고, right에 있는 노드들의 키값을 기준으로 오름차순 정렬된다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree5-1-768x288-1.png)
+
 5. 5라는 키를 가진 노드를 삽입한다.
   - root 노드 + 1 갯수를 초과하여, child 노드가 구성되어질 수 없기 때문에..
   - 리밸랜생이 일어난다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree6-2.png)
+
 6. 6 노드를 삽입한다.
 
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btree7-1-1024x471-1.png)
+
 7. 7 노드 삽입
    - 하는 순간 조건을 1번조건 만족시키기 위해 리밸랜싱 일어남 (현재 M=2, 하나의 노드는 최대 2개까지 자식노드를 가질 수 있음.)
    -  오른쪽 서브 트리에서 하나를 상위로 올리게 되면.... (a non-leaf node with k children should have k-1 keys) 이 조건을 어기게됨.
@@ -78,6 +85,7 @@ all leaves must appear on the same level
    - all leaves must appear on the same level를 만족시키기 위해 나머지 왼쪽 서브트리에서도 리밸랜싱..
    
 ![](https://www.baeldung.com/wp-content/uploads/sites/4/2020/05/btreefull-3.png)
+
 8. 8, 9 노드 삽입
     - 8 노드를 삽입하면, 7 오른쪽에 붙었다가.. (each internal node (non-leaf and non-root) can have at least (m/2) children (rounded up)), 에 의거해 최대 2개까지 자식 노드를 가질 수 있으니.. 리밸랜싱
 
