@@ -60,4 +60,24 @@
 * 회복 과정에서 UNDO가 필요 없음.
 * 데이터베이스의 원자성 보장
 
-#### Checkpoint recovery
+#### Checkpoint Recovery
+#### Checkpoint
+* 특정한 체크포인트로 설정한 지점을 기점으로, 해당 지점 이전에는 트랜잭션이 성공적으로 수행되어 디스크에 저장되어 있다고 보장할 수 있습니다.
+* 실패가 일어날 경우, redo는 check point 시점부터 log를 따라가면서 트랜잭션을 수행합니다. undo는 트랜잭션을 거꾸로 재수행하면서 트랜잭션을 없던 일로 만듭니다
+
+![image](https://user-images.githubusercontent.com/41055141/125605863-8ff54452-4279-44f7-a5c0-bcef1f3ff020.png)
+* Transaction T1
+checkpoint 이전에 실행이 완료되었으므로 failure 되더라도 이미 disk에 저장이 된 상태이므로 회복을 하지 않습니다.
+* Transaction T2
+checkpoint 이전에 실행된 내용은 disk에 반영이 되었으므로 check point 이후의 내용을 log를 따라가는 redo를 수행합니다.
+* Transaction T3
+failure 시점에 실행중이였으므로 check point 시점으로 undo한 후, 트랜잭션을 재실행합니다.
+* Transaction T4
+checkpoint 이후에 실행됐고 failure 시점 전에 실행이 끝났으므로 redo를 수행합니다.
+* Transaction T5
+checkpoint 이후에 실행됐고 failure 시점에 실행중이였으므로 시작지점까지 undo한 후, 트랜잭션을 재실행합니다.
+
+그러니까 정리하자면,
+* 체크포인트 시점 중간에 (스냅샷 찍는 도중에) 실행되는 트랜잭션은 모두 undo한다.
+* 체크포인트 시점 이후에 실행된 트랜잭션은 모두 undo한다.
+* undo list에 기록된 트랜잭션이 성공적으로 undo되면 이를 다시 redo한다.
