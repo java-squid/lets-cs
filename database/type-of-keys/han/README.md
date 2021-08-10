@@ -74,3 +74,8 @@
 
 - 관계형 데이터 베이스 실전 입문
     - 3장, 6장 
+
+# QnA
+
+## 데이터베이스 최소성, 유일성? 
+![image](https://user-images.githubusercontent.com/22140570/128857368-49e05cde-7ecf-4eb8-a623-715b5d175444.png)
