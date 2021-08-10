@@ -63,7 +63,7 @@
 - 대체키
 - 릴레이션에 마땅한 후보키가 없을 경우, Database에서 식별을 위해 생성한, 선언된 키를 의미.
 - 관계형 모델이는 자연키, 대체키란 개념이 없음.
-    - 관계형 모델이는 후보키, 슈포키 뿐이다.
+    - 관계형 모델이는 후보키, 슈퍼키 뿐이다.
 - 참고
   - https://bunhere.tistory.com/45
   - https://www.toolbox.com/tech/data-management/question/the-difference-between-a-primary-key-and-a-surrogate-key-011407/
