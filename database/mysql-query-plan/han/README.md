@@ -1,6 +1,5 @@
 # SELECT 쿼리 실행 순서
 - 작성하는 쿼리문의 순서와, 실제 DB에서 실행되는 순서가 다름.
-- 
 - 보통 Select query 문법 순서
     1. SELECT
     2. FROM
