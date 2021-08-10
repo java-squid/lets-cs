@@ -167,10 +167,23 @@ WHERE foo.bar = 'infrastructure as a service' OR foo.bar = 'iaas';
 - 참고
     - https://stackoverflow.com/questions/586381/mysql-not-using-indexes-with-where-in-clause
 
-
 # 참고
 - https://www.exoscale.com/syslog/explaining-mysql-queries/#:~:text=In%20MySQL%2C%20EXPLAIN%20can%20be,as%20a%20service'%20OR%20foo.
 - https://cheese10yun.github.io/mysql-explian/
 - https://www.eversql.com/mysql-explain-example-explaining-mysql-explain-using-stackoverflow-data/
 - https://nomadlee.com/mysql-explain-sql/
-- https://www.sitepoint.com/using-explain-to-write-better-mysql-queries/#:~:text=Extra%20%E2%80%93%20contains%20additional%20information%20regarding,may%20indicate%20a%20troublesome%20query.
+- https://www.sitepoint.com/using-explain-to-write-better-mysql-queries/#:~:text=Extra%20%E2%80%93%20contains%20additional%20information%20regarding,may%20indicate%20a%20troublesome%20query
+
+
+# QnA
+
+## DB를 파티셔닝 이유는 무엇일까?
+![image](https://user-images.githubusercontent.com/22140570/128856777-91593f01-d816-4142-9466-fef0c48991f5.png)
+
+## 클러스트 인덱스이란?
+![image](https://user-images.githubusercontent.com/22140570/128857129-a45f3917-8f68-40d9-bb5a-e283032ae69d.png)
+
+
+## SIMPLE, SUBUQUERY, UNION의 차이점은 무엇인가요?
+![image](https://user-images.githubusercontent.com/22140570/128857270-50b49979-3ee4-4628-b535-7f7a38c0e809.png)
+
