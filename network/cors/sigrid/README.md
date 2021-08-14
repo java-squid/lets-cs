@@ -1,6 +1,6 @@
-## 네트워크: CORS란 무엇인가
-### CORS: Cross-Origin Resource Sharing
-#### Origin
+# 네트워크: CORS란 무엇인가
+## CORS: Cross-Origin Resource Sharing
+### Origin
 * URL 구조에서 Protocol + Host + Port를 합친 것을 의미함
 ```console
 location.source
