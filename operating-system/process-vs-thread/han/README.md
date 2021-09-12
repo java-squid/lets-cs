@@ -46,3 +46,7 @@
 - 프로그램을 여러 개 실행 시키는 것 보다는, 하나의 프로그램에서 여러 작업을 해결토록 하는 것이 낫다.
 - 자원의 효율성, 처리 비용도 감소, 심지어는 응답 시간도 단축되기 때문에
 - 왜? 프로세스 간 문맥교환은 비용이 큰 작업.
+
+# 참고
+- https://gmlwjd9405.github.io/2018/09/14/process-vs-thread.html
+- https://www.youtube.com/watch?v=1grtWKqTn50
