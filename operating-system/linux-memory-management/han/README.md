@@ -136,3 +136,119 @@
 - http://web.mit.edu/rhel-doc/4/RH-DOCS/rhel-isa-ko-4/s1-memory-virt-details.html
 - https://wogh8732.tistory.com/395
 - https://m.blog.naver.com/4717010/220015472363
+
+
+
+# QnA
+
+## Logical Address와 Physical Address가 별도로 존재하는 이유는 무엇일까요?
+
+- Multi-process 환경에서 발생할 수 있는 충돌을 최소화 하기 위해서
+- 혹은 한정된 Physical Memory, Address 에도, 좀 더 확장성 있게 사용하기 위해서 (Logical Address를 통해)
+
+- 참고
+  - https://stackoverflow.com/questions/29771977/purpose-of-logical-address/47988290
+
+
+
+## Address Binding에 대해 설명
+
+- 데이터를 메모리에 올리는 걸 Address Binding이라 하는듯.
+- 언제 올리는 지에 따라서..
+  1.  Compile time에 메모리에 올릴 수 있고,
+  2. 혹은 Load time 프록그램을 실행 전에
+  3. Execution time 실행 시에도 올릴 수 있음! (신기)
+
+- 참고
+
+- https://jhnyang.tistory.com/133
+
+
+
+## 컴파일러가 심볼릭 주소를 논리주소로 바꾸는 값은 중복될 수 있음 왜?
+
+![](https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2F4zMbZ%2FbtqNqZGuKdJ%2Fo7F7BrEAr7ILddV77RESs1%2Fimg.png)
+
+- Address binding 과 관련 있는듯.
+
+- symbolic address는 컴파일을 통해 Logcial Addess로 변환 되는데, 이 때 나온 값이 중복 될 수 있음.
+- 왜?
+  - 프로세스 별로 컴파일이라는 과정을 유니크하게 보장할 수는 없을듯.
+
+
+
+## MMU가 base register, limit register를 사용하는 이유
+
+- Address binding 과 관련 있는듯.
+- 프로세스 마다 접근할 수 있는 구역을 설정하기 위해서, 보장해주기 위해서 사용하는듯
+
+
+
+## Dynamic Loading과 Virtual Memory는 어떤 관계
+
+- CPU가 바라보는 주소가 있는 공간이 Virtual Memory
+- Dynamic Loading의 경우, 메모리 공간을 효율적으로 사용하기 위한 기법
+
+- 둘 다 메모리 부족을 해결하기 위해서 등장한 기법, 방법으로 이해되어요.
+  - 전자의 경우 Virtual Memory라는 가상공간을 통해서 Physical Memory의 부족을 해소
+  - 후자의 경우 프로그램에서 사용하는 부분만 Physical Memory에 올림으로써 해소
+
+
+
+## Dynamic Loading vs Overlays vs Virtual Memory vs Paging 차이
+
+> Dynamic Loading
+
+- 프로그램을 Physical Memory에 동적(필요할 때 마다) 올림.
+- 프로그래머가 직접 컨드롤할 수 있는 부분도 있는듯 (코드 레벨에서 조절할 수 있다는 의미인듯)
+
+
+
+>  Overlays
+
+- Dynamic Loading과 비슷
+- 다만, 메모리보다 프로세스가 더 클 경우 사용되는 기법(Dynamic Loading은 이와 같을 경우 해결이 불가능한듯)
+
+
+
+>  Virtual Memory
+
+- Physical Memory 부족을 위해 나온 개념
+- CPU가 바라보로 있는 주소이고, 프로세스마다 독립적인 공간을 보장받을듯 싶음.
+
+
+
+>  Paging
+
+- Logical Address를 Page 라는 블록으로 분할하고 관리하는 기법
+- 즉 프로세스를 일정 크기로 잘라서 메모리에 적재하는 방식
+- 참고적으로 Page는 Logical Address를 나눈 크기를 의미하고, Frame은 Physical Memory를 나눈 크기를 의미
+
+
+
+- 참고
+  - https://jhnyang.tistory.com/44
+  - https://jhnyang.tistory.com/290
+
+
+
+## Page Fault 발생 과정
+
+1. CPU 가 Logical Address를 가지고 page table에 들어감.
+2. 이 때 가져온 Logical Address 해당 프로세스에서는 사용되지 않는 주소이던지, Logical Address에 해당하는 Physical Address의 주소가 Page Table에 없을 경우 Invalid 판단이 내려집니다. 이 경우 page fault handler가 실행되어요.
+2.1 전자의 경우 해당 요청 명령이 abort되고,
+2.2 후자의 경우 physical memory에 올라갈 공간 (frame)을 확보합니다.
+3. 요청한 Logical Address에 대한 정보를 Disk에서 읽어서 Physical Memory에 가져옵니다.
+4. 그리고 그에 대한 정보를 Page table을 업데이트 합니다.
+
+
+
+- 즉 위 절차를 통해 생각해볼 때, 메모리 공간 데이터의 경우 아래 2가지 시나리오가 있지 않을까 싶네요
+
+1. 요청한 Logical Address에 대한 정보가 page table, physical memory 에도 없을 경우 (위 절차를 밟아서..다시 가져올듯)
+2. 원하는 데이터가 physical memory(메모리)에 있는데, page table에는 없는 경우 아마도 MMU를 통해 메모리에서 찾은 후 page table을 업데이트하겠네요.
+
+
+
+- 참고
+  - https://data-engineer.tistory.com/53
