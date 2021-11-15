@@ -1,6 +1,6 @@
 # Mutex
 - Mutual (mut) + Exclusion (ex) 의 합성어
-- 상호 배제를 이ㅇ
+- 상호 배제를 의미
 - 여러 스레드를 실행하는 환경, 자원에 대한 접근을 강제하기 위한 동기화 방식
 
 > Mutual Exclusion
